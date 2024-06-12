@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funcionários</title>
+    <title>Gerenciamento de Funcionários</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Funcionários</h1>
-    <div class="button-container">
-        <button onclick="inserirTodosFuncionarios()">Inserir Todos os Funcionários</button>
-        <button onclick="removerFuncionario()">Remover Funcionário “João”</button>
-        <button onclick="getAllFuncionarios()">Listar Todos os Funcionários</button>
-        <button onclick="aplicarAumento()">Aplicar 10% de Aumento</button>
-        <button onclick="agruparPorFuncao()">Agrupar por Função</button>
-        <button onclick="getAniversariantes()">Aniversariantes (Meses 10 e 12)</button>
-        <button onclick="getFuncionarioMaisVelho()">Funcionário Mais Velho</button>
-        <button onclick="getTotalSalarios()">Total dos Salários</button>
-        <button onclick="getFuncionariosOrdemAlfabetica()">Funcionários em Ordem Alfabética</button>
-        <button onclick="getSalariosMinimos()">Salários em Mínimos</button>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Gerenciamento de Funcionários</h1>
+        <div class="button-container text-center mb-4">
+            <button class="btn btn-success m-2" onclick="inserirTodosFuncionarios()">1. Inserir Todos os Funcionários</button>
+            <button class="btn btn-success m-2" onclick="removerFuncionario()">2. Remover Funcionário “João”</button>
+            <button class="btn btn-success m-2" onclick="getAllFuncionarios()">3. Listar Todos os Funcionários</button>
+            <button class="btn btn-success m-2" onclick="aplicarAumento()">4. Aplicar 10% de Aumento</button>
+            <button class="btn btn-success m-2" onclick="agruparPorFuncao()">5. Agrupar por Função</button>
+            <button class="btn btn-success m-2" onclick="getAniversariantes()">6. Aniversariantes (Meses 10 e 12)</button>
+            <button class="btn btn-success m-2" onclick="getFuncionarioMaisVelho()">7. Funcionário Mais Velho</button>
+            <button class="btn btn-success m-2" onclick="getTotalSalarios()">8. Total dos Salários</button>
+            <button class="btn btn-success m-2" onclick="getFuncionariosOrdemAlfabetica()">9. Funcionários em Ordem Alfabética</button>
+            <button class="btn btn-success m-2" onclick="getSalariosMinimos()">10. Salários em Mínimos</button>
+        </div>
+        <div id="result" class="mt-4"></div>
     </div>
-    <div id="result"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

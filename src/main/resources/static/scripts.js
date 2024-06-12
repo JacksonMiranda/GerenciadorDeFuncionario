@@ -68,13 +68,16 @@ async function getSalariosMinimos() {
 }
 
 function displayFuncionarios(data) {
-    let table = `<table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Data Nascimento</th>
-                        <th>Salário</th>
-                        <th>Função</th>
-                    </tr>`;
+    let table = `<table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Data Nascimento</th>
+                            <th>Salário</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
     data.forEach(func => {
         table += `<tr>
                     <td>${func.nome}</td>
@@ -83,18 +86,21 @@ function displayFuncionarios(data) {
                     <td>${func.funcao}</td>
                   </tr>`;
     });
-    table += `</table>`;
+    table += `</tbody></table>`;
     document.getElementById('result').innerHTML = table;
 }
 
 function displayFuncionariosAgrupados(data) {
-    let table = `<table>
-                    <tr>
-                        <th>Função</th>
-                        <th>Nome</th>
-                        <th>Data Nascimento</th>
-                        <th>Salário</th>
-                    </tr>`;
+    let table = `<table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Função</th>
+                            <th>Nome</th>
+                            <th>Data Nascimento</th>
+                            <th>Salário</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
     for (const [funcao, funcs] of Object.entries(data)) {
         funcs.forEach(func => {
             table += `<tr>
@@ -105,37 +111,44 @@ function displayFuncionariosAgrupados(data) {
                       </tr>`;
         });
     }
-    table += `</table>`;
+    table += `</tbody></table>`;
     document.getElementById('result').innerHTML = table;
 }
 
 function displayFuncionarioMaisVelho(func) {
-    let table = `<table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Idade</th>
-                    </tr>
+    let table = `<table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>${func.nome}</td>
                         <td>${calculateAge(func.dataNascimento)}</td>
                     </tr>
+                    </tbody>
                 </table>`;
     document.getElementById('result').innerHTML = table;
 }
 
 function displaySalariosMinimos(data) {
-    let table = `<table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Salários Mínimos</th>
-                    </tr>`;
+    let table = `<table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Salários Mínimos</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
     data.forEach(item => {
         table += `<tr>
                     <td>${item.nome}</td>
                     <td>${item.salariosMinimos.toFixed(2)}</td>
                   </tr>`;
     });
-    table += `</table>`;
+    table += `</tbody></table>`;
     document.getElementById('result').innerHTML = table;
 }
 
