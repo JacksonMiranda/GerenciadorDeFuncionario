@@ -1,0 +1,46 @@
+# Configuração de labels padronizadas para o repositório
+# Labels padrão em PT-BR para organização e classificação de issues e PRs
+
+- name: bug
+  color: d73a4a
+  description: Algo não está funcionando
+  
+- name: feature
+  color: a2eeef
+  description: Nova funcionalidade ou solicitação
+  
+- name: chore
+  color: fef2c0
+  description: Tarefas de manutenção e organização
+  
+- name: docs
+  color: 0075ca
+  description: Melhorias ou adições à documentação
+  
+- name: perf
+  color: 6f42c1
+  description: Melhorias de performance
+  
+- name: refactor
+  color: fbca04
+  description: Refatoração de código sem mudança de funcionalidade
+  
+- name: test
+  color: 1d76db
+  description: Adição ou correção de testes
+  
+- name: ci
+  color: 28a745
+  description: Mudanças relacionadas a CI/CD
+  
+- name: security
+  color: ee0701
+  description: Questões relacionadas à segurança
+  
+- name: help wanted
+  color: 008672
+  description: Ajuda externa é bem-vinda
+  
+- name: good first issue
+  color: 7057ff
+  description: Boa para quem está começando a contribuir
