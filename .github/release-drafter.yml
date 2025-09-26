@@ -1,0 +1,78 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: '🚀 Features / Funcionalidades'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes / Correções'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '🧰 Maintenance / Manutenção'
+    labels:
+      - 'chore'
+      - 'dependencies'
+  - title: '📚 Documentation / Documentação'
+    labels:
+      - 'documentation'
+      - 'docs'
+  - title: '🔒 Security / Segurança'
+    labels:
+      - 'security'
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+
+version-resolver:
+  major:
+    labels:
+      - 'major'
+      - 'breaking'
+  minor:
+    labels:
+      - 'minor'
+      - 'feature'
+      - 'enhancement'
+  patch:
+    labels:
+      - 'patch'
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+      - 'chore'
+      - 'dependencies'
+      - 'documentation'
+      - 'docs'
+  default: patch
+
+template: |
+  ## What's Changed / O Que Mudou
+
+  $CHANGES
+
+  ## Contributors / Contribuidores
+
+  Thanks to all contributors who made this release possible! / Obrigado a todos os contribuidores que tornaram esta versão possível!
+
+  $CONTRIBUTORS
+
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+
+  ---
+
+  ### Installation / Instalação
+
+  1. Clone o repositório / Clone the repository:
+     ```bash
+     git clone https://github.com/JacksonMiranda/GerenciadorDeFuncionario.git
+     ```
+
+  2. Execute a aplicação / Run the application:
+     ```bash
+     ./mvnw spring-boot:run
+     ```
+
+  3. Acesse / Access: http://localhost:8080

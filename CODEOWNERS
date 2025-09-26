@@ -1,0 +1,21 @@
+# Global owners
+* @JacksonMiranda
+
+# Java source code
+/src/main/java/ @JacksonMiranda
+/src/test/java/ @JacksonMiranda
+
+# Configuration files
+/src/main/resources/ @JacksonMiranda
+*.properties @JacksonMiranda
+pom.xml @JacksonMiranda
+
+# Documentation
+/docs/ @JacksonMiranda
+*.md @JacksonMiranda
+
+# GitHub workflows and templates
+/.github/ @JacksonMiranda
+
+# Frontend assets
+/src/main/resources/static/ @JacksonMiranda
